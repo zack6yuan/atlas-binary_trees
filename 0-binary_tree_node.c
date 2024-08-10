@@ -15,7 +15,7 @@ tree_node = malloc(sizeof(binary_tree_t)); /*malloc for node*/
 if (!tree_node) /*check if malloc failed*/
 {
 return (NULL);
- }
+}
 tree_node->n = value; /*give node value*/
 tree_node->parent = parent; /*assign parent of node*/
 tree_node->left = NULL; /*left child NULL*/
