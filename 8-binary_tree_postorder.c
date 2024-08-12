@@ -8,5 +8,19 @@
  */
 void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int))
 {
-        
+if (!tree || !func) /*check if NULL*/
+{
+return; /*return nothing*/
+}
+
+if (tree->left) /*access element*/
+{
+binary_tree_preorder(tree->left, func); /*traverse left*/
+}
+if (tree->right) /*access element*/
+{
+binary_tree_preorder(tree->right, func); /*traverse right*/
+}
+
+func(tree->n);
 }
