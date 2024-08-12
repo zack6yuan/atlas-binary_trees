@@ -23,15 +23,15 @@ return (NULL);
 
 newnode->n = value; /*set value of newnode*/
 newnode->parent = parent; /*set parent of newnode*/
-newnode->left = NULL; /*set right child of parent to NULL*/
-newnode->right = NULL; /*set left child of parent to NULL*/
+newnode->left = NULL; /*set left child of parent to NULL*/
+newnode->right = NULL; /*set child child of parent to NULL*/
 
 if (parent->right) /*if parent already has left child*/
 {
-newnode->right = parent->right; /*newnode left ptr*/
-newnode->right->parent = newnode; /*left child's parent*/
+newnode->right = parent->right; /*newnode right ptr*/
+newnode->right->parent = newnode; /*right child's parent*/
 }
-parent->right = newnode; /*parent's left ptr pts to new node*/
+parent->right = newnode; /*parent's right ptr pts to new node*/
 
 return (newnode); /*return newnode ptr*/
 }
