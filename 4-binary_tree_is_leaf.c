@@ -6,13 +6,13 @@
  */
 int binary_tree_is_leaf(const binary_tree_t *node)
 {
-        if (!node)
-        {
-                return (0);
-        }
-        if (!node->left && !node->right)
-        {
-                return (1);
-        }
-        return (0);
+if (!node) /*if there is no node*/
+{
+return (0);
+}
+if (!node->left && !node->right) /*if no children*/
+{
+return (1); /*leaf*/
+}
+return (0);
 }
