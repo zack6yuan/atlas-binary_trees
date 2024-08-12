@@ -8,5 +8,15 @@
  */
 void binary_tree_inorder(const binary_tree_t *tree, void (*func)(int))
 {
-        
+if (!tree || !func) /*check if NULL*/
+{
+return;
+}
+
+if (tree || func) /*if not NULL*/
+{
+binary_tree_inorder(tree->left, func);
+func(tree->n)
+binary_tree_inorde(tree->right, func);
+}
 }
