@@ -15,11 +15,11 @@ return; /*return nothing*/
 
 if (tree->left) /*access element*/
 {
-binary_tree_preorder(tree->left, func); /*traverse left*/
+binary_tree_postorder(tree->left, func); /*traverse left*/
 }
 if (tree->right) /*access element*/
 {
-binary_tree_preorder(tree->right, func); /*traverse right*/
+binary_tree_postorder(tree->right, func); /*traverse right*/
 }
 
 func(tree->n);
