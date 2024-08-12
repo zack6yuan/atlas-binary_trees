@@ -6,9 +6,13 @@
  */
 int binary_tree_is_root(const binary_tree_t *node)
 {
-        if (!node && !node->parent)
+        if (!node)
         {
                 return(0); /*otherwise*/
         }
-        return (1); /*root!*/
+        if (!node->parent)
+        {
+                return (1); /*root*/
+        }
+        return (0);
 }
