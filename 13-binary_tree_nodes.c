@@ -13,7 +13,7 @@ if (!tree) /*if no tree*/
 {
 return (0);
 }
-if (tree->left && tree->right) /*checks if leaf*/
+if (tree->left || tree->right) /*checks if leaf*/
 {
 count = 1;
 }
