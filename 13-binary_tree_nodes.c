@@ -7,16 +7,16 @@
  */
 size_t binary_tree_nodes(const binary_tree_t *tree)
 {
-        size_t count = 0;
+size_t count = 0;
 
-        if (!tree) /*if no tree*/
-        {
-            return (0);
-        }
-        if (tree->left && tree->right) /*checks if leaf*/
-        {
-            count = 1;
-        }
-        return (binary_tree_nodes(tree->left) + binary_tree_nodes(tree->right) + count);
-        /*returns count of node with at least 1 child + 1 for current node*/
+if (!tree) /*if no tree*/
+{
+return (0);
+}
+if (tree->left && tree->right) /*checks if leaf*/
+{
+count = 1;
+}
+return (binary_tree_nodes(tree->left) + binary_tree_nodes(tree->right) + count);
+/*returns count of node with at least 1 child + 1 for current node*/
 }
