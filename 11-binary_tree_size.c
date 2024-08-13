@@ -6,5 +6,16 @@
  */
 size_t binary_tree_size(const binary_tree_t *tree)
 {
-        
+        size_t left;
+        size_t right;
+
+        if (!tree) /*if there is no tree*/
+        {
+            return (0);
+        }
+
+        left = binary_tree_size(tree->left); /*for left children*/
+        right = binary_tree_size(tree->right); /*for right children*/
+
+        return (left + right + 1); /*size + 1 for current node*/
 }
