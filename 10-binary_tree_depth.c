@@ -11,4 +11,4 @@ if (!tree || !tree->parent) /*if there is no tree*/
 return (0);
 }
 return (1 + binary_tree_depth(tree->parent));
-} 
+}
