@@ -6,5 +6,17 @@
  */
 int binary_tree_is_full(const binary_tree_t *tree)
 {
-        
+if (!tree) /*if there is no tree*/
+{
+return (0);
+}
+if (!tree->left && !tree->right) /*leaf check (no children)*/
+{
+return (1);
+}
+if (tree->left && tree->right) /*check for children, not "NULL"*/
+{
+return (binary_tree_is_full(tree->left) && binary_tree_is_full(tree->right));
+}
+return (0);
 }
