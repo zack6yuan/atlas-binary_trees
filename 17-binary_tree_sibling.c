@@ -11,11 +11,11 @@ if (!node || !node->parent)
 {
 return (NULL);
 }
-if (node->parent->left = node)
+if (node->parent->left == node)
 { /*if left child, return right child*/
 return (node->parent->right);
 }
-if (node->parent->right = node)
+if (node->parent->right == node)
 { /*if right child, return left child*/
 return (node->parent->left);
 }
