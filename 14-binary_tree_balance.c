@@ -6,22 +6,22 @@
  */
 int binary_tree_balance(const binary_tree_t *tree)
 {
-int right_tree = 0;
-int left_tree = 0;
+int right_tree = 0; /*height of right subtree*/
+int left_tree = 0; /*height of left subtree*/
 
-if (!tree)
+if (!tree) /*if there is no tree*/
 {
 return (0);
 }
-if (tree->right)
+if (tree->right) /*check if right is present*/
 {
 right_tree = binary_tree_height(tree->right) + 1;
 }
-if (tree->left)
+if (tree->left) /*check if left is present*/
 {
 left_tree = binary_tree_height(tree->left) + 1;
 }
-return (left_tree- right_tree);
+return (left_tree - right_tree);
 }
 
 /**
@@ -40,6 +40,6 @@ return (0);
 }
 left_tree = binary_tree_height(tree->left) + 1; /*left height*/
 right_tree = binary_tree_height(tree->right) + 1; /*right height*/
-
-return (left_tree - right_tree);
+/*return max height of L and R subtrees + 1 for current node*/
+return (1 + (left_tree > right_tree ? left_tree : right_tree));
 }
