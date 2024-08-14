@@ -8,7 +8,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 size_t left_tree;
 size_t right_tree;
-int pefect_left;
+int perfect_left;
 int perfect_right;
 
 if (!tree)
@@ -32,6 +32,7 @@ perfect_right = binary_tree_is_perfect(tree->right);
 
 return (perfect_left && perfect_right);
 }
+
 /**
  * binary_tree_height - measure the height of a binary tree.
  * @tree: a pointer to the root node of the tree to measure the height.
