@@ -38,8 +38,8 @@ if (!tree) /*if tree is empty*/
 {
 return (0);
 }
-left_tree = binary_tree_height(tree->left) + 1; /*left height*/
-right_tree = binary_tree_height(tree->right) + 1; /*right height*/
+left_tree = binary_tree_height(tree->left); /*left height*/
+right_tree = binary_tree_height(tree->right); /*right height*/
 /*return max height of L and R subtrees + 1 for current node*/
 return (1 + (left_tree > right_tree ? left_tree : right_tree));
 }
