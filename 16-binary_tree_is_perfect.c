@@ -8,6 +8,8 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 size_t left_tree;
 size_t right_tree;
+int pefect_left;
+int perfect_right;
 
 if (!tree)
 {
@@ -25,8 +27,8 @@ if (left_tree != right_tree)
 {
 return (0);
 }
-int perfect_left = binary_tree_is_perfect(tree->left);
-int perfect_right = binary_tree_is_perfect(tree->right);
+perfect_left = binary_tree_is_perfect(tree->left);
+perfect_right = binary_tree_is_perfect(tree->right);
 
 return (perfect_left && perfect_right);
 }
