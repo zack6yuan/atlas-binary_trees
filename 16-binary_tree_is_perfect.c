@@ -6,13 +6,16 @@
  */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
+size_t left_tree;
+size_t right_tree;
+
 if (!tree)
 {
 return (0);
 }
 
-size_t left_tree = binary_tree_height(tree->left);
-size_t right_tree = binary_tree_height(tree->right);
+left_tree = binary_tree_height(tree->left);
+right_tree = binary_tree_height(tree->right);
 
 if (!tree->left && !tree->right)
 {
@@ -34,12 +37,15 @@ return (perfect_left && perfect_right);
  */
 size_t binary_tree_height(const binary_tree_t *tree)
 {
+size_t left_tree;
+size_t right_tree;
+
 if (!tree) /*if tree is empty*/
 {
 return (0);
 }
-size_t left_tree = binary_tree_height(tree->left);
-size_t right_tree = binary_tree_height(tree->right);
+left_tree = binary_tree_height(tree->left);
+right_tree = binary_tree_height(tree->right);
 /*return max height of L and R subtrees + 1 for current node*/
 return (1 + (left_tree > right_tree ? left_tree : right_tree));
 }
