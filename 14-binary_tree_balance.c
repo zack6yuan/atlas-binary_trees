@@ -15,11 +15,11 @@ return (0);
 }
 if (tree->right) /*check if right is present*/
 {
-right_tree = binary_tree_height(tree->right) + 1;
+right_tree = binary_tree_height(tree->right);
 }
 if (tree->left) /*check if left is present*/
 {
-left_tree = binary_tree_height(tree->left) + 1;
+left_tree = binary_tree_height(tree->left);
 }
 return (left_tree - right_tree);
 }
